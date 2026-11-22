@@ -14,7 +14,7 @@ const lanches = ref([
 ])
 
 // #14 - Filtro com computed: recalcula sozinho quando a lista muda
-// Em React: lanches.filter((l) => l.tipo === 'bebida')
+// filter fica só com os itens do tipo bebida
 const bebidas = computed(() => lanches.value.filter((l) => l.tipo === 'bebida'))
 
 // Exercício 2: acrescentar um lanche novo no array, sem descrição,
@@ -26,7 +26,7 @@ const bebidas = computed(() => lanches.value.filter((l) => l.tipo === 'bebida'))
     <h3>#8 a #13 - Cardápio</h3>
     <div class="grade">
       <!-- #9 - Lista: v-for com :key · #10 - Props: cada :nome, :preco... entrega um dado ao Cartao -->
-      <!-- Em React: {lanches.map((l) => <Cartao key={l.id} ... />)} -->
+      <!-- um Cartao para cada lanche do array -->
       <Cartao
         v-for="lanche in lanches"
         :key="lanche.id"

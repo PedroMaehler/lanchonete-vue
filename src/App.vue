@@ -33,7 +33,7 @@ import Carrinho from './components/Carrinho.vue'
 </script>
 
 <template>
-  <!-- #7 - Vários elementos na raiz: em Vue não precisa de <>...</> -->
+  <!-- #7 - Vários elementos na raiz: o template aceita mais de um elemento solto -->
   <Cabecalho />
 
   <main>
@@ -43,7 +43,7 @@ import Carrinho from './components/Carrinho.vue'
     <!-- PARTE 1 -->
     <div class="caixa">
       <h3>#3 - Interpolação</h3>
-      <!-- Em React: <p>Bem-vindo à {nome}!</p> -->
+      <!-- {{ }} mostra o valor da variável dentro do HTML -->
       <p>Bem-vindo à {{ nome }}!</p>
       <p>Estamos em {{ ano }}. Ano que vem será {{ ano + 1 }}.</p>
       <p>Em maiúsculas: {{ nome.toUpperCase() }}</p>
@@ -51,25 +51,25 @@ import Carrinho from './components/Carrinho.vue'
 
     <div class="caixa">
       <h3>#4 - Classe e estilo</h3>
-      <!-- Em React: className="aviso" -->
+      <!-- class normal, como no HTML -->
       <p class="aviso">Em Vue usamos class, igual ao HTML</p>
-      <!-- Em React: style={estiloDestaque} -->
+      <!-- :style recebe o objeto estiloDestaque -->
       <p :style="estiloDestaque">Estilo inline é um objeto</p>
     </div>
 
     <div class="caixa">
       <h3>#5 - Atributo com dois-pontos</h3>
-      <!-- Em React: src={fotoFachada} -->
+      <!-- :src pega o endereço da variável fotoFachada -->
       <img :src="fotoFachada" alt="Fachada da lanchonete" />
     </div>
 
     <div class="caixa">
       <h3>#6 - Condicional</h3>
-      <!-- Em React: {aberta ? <p>Aberta!</p> : <p>Fechada.</p>} -->
+      <!-- v-if e v-else: aparece só um dos dois -->
       <p v-if="aberta">Aberta! Faça seu pedido.</p>
       <p v-else>Fechada. Volte amanhã.</p>
 
-      <!-- Em React: {aberta && <p>...</p>} -->
+      <!-- v-if sozinho: aparece só quando aberta é true -->
       <p v-if="aberta">Hoje tem promoção de batata frita.</p>
 
       <!-- Exercício 1: usar a variável temEntrega para mostrar só uma das frases -->

@@ -6,16 +6,16 @@ const itens = ref([])
 const texto = ref('')
 
 // #25 - Adicionar
-// Em React: setItens([...itens, novo])  (o React precisa de um array NOVO)
+// push coloca o item novo no fim da lista
 function adicionar() {
   if (texto.value.trim() === '') return
   const novo = { id: Date.now(), texto: texto.value, entregue: false }
-  itens.value.push(novo) // em Vue o push funciona direto
+  itens.value.push(novo) // a tela atualiza sozinha
   texto.value = ''
 }
 
 // #26 - Remover
-// Em React: setItens(itens.filter((i) => i.id !== id))
+// filter fica com todos os itens, menos o do id clicado
 function remover(id) {
   itens.value = itens.value.filter((i) => i.id !== id)
 }

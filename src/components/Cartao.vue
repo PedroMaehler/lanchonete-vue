@@ -1,7 +1,7 @@
 <!-- PARTE 2 -->
 <script setup>
 // #10 - Props: os dados que o pai passa para o filho
-// Em React: function Cartao({ nome, preco, foto, descricao = 'Sem descrição', maisPedido })
+// defineProps lista os dados que o Cartao recebe
 defineProps({
   nome: String,
   preco: Number,
@@ -13,14 +13,14 @@ defineProps({
 
 <template>
   <!-- #12 - Classe condicional: borda dourada no mais pedido -->
-  <!-- Em React: className={maisPedido ? 'cartao cartao-destaque' : 'cartao'} -->
+  <!-- :class liga cartao-destaque só quando maisPedido é true -->
   <div class="cartao" :class="{ 'cartao-destaque': maisPedido }">
     <img :src="foto" :alt="nome" />
     <h3>{{ nome }}</h3>
     <p>{{ descricao }}</p>
     <p class="preco">R$ {{ preco }}</p>
     <!-- #13 - Selo com v-if: aparece só no mais pedido -->
-    <!-- Em React: {maisPedido && <span>...</span>} -->
+    <!-- v-if: o selo só existe quando maisPedido é true -->
     <span v-if="maisPedido" class="selo">Mais pedido</span>
   </div>
 </template>
