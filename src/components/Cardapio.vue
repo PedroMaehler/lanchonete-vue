@@ -13,8 +13,8 @@ const lanches = ref([
   { id: 6, nome: 'Suco de Laranja', preco: 9, tipo: 'bebida', foto: 'https://picsum.photos/200?random=6', descricao: 'Natural, 500 ml', maisPedido: true },
 ])
 
-// #14 - Filtro com computed: recalcula sozinho quando a lista muda
-// filter fica só com os itens do tipo bebida
+
+// #14 - Filtro com computed: só as bebidas, recalcula sozinho quando a lista muda
 const bebidas = computed(() => lanches.value.filter((l) => l.tipo === 'bebida'))
 
 // Exercício 2: acrescentar um lanche novo no array, sem descrição,
@@ -25,8 +25,8 @@ const bebidas = computed(() => lanches.value.filter((l) => l.tipo === 'bebida'))
   <section class="caixa">
     <h3>#8 a #13 - Cardápio</h3>
     <div class="grade">
-      <!-- #9 - Lista: v-for com :key · #10 - Props: cada :nome, :preco... entrega um dado ao Cartao -->
-      <!-- um Cartao para cada lanche do array -->
+
+      <!-- #9 - Lista: v-for cria um Cartao por lanche · #10 - Props: cada :nome, :preco... vai para o Cartao -->
       <Cartao
         v-for="lanche in lanches"
         :key="lanche.id"

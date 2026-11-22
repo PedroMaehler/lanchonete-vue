@@ -1,13 +1,13 @@
 <!-- PARTE 3 -->
 <script setup>
-// #15 - Evento: o botão chama uma função com nome
-// o @click do botão chama esta função pelo nome
+
+// #15 - Evento: o @click chama a função pelo nome
 function chamarGarcom() {
   alert('O garçom já está indo!')
 }
 
-// #16 - Evento com argumento
-// o @click passa o nome do lanche como argumento
+
+// #16 - Evento com argumento: o @click manda o nome do lanche
 function pedir(lanche) {
   alert('Você pediu: ' + lanche)
 }

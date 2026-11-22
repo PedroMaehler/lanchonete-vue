@@ -5,8 +5,8 @@ import { ref } from 'vue'
 const itens = ref([])
 const texto = ref('')
 
-// #25 - Adicionar
-// push coloca o item novo no fim da lista
+
+// #25 - Adicionar: push coloca o item no fim da lista
 function adicionar() {
   if (texto.value.trim() === '') return
   const novo = { id: Date.now(), texto: texto.value, entregue: false }
@@ -14,8 +14,8 @@ function adicionar() {
   texto.value = ''
 }
 
-// #26 - Remover
-// filter fica com todos os itens, menos o do id clicado
+
+// #26 - Remover: filter fica com todos os itens, menos o do id clicado
 function remover(id) {
   itens.value = itens.value.filter((i) => i.id !== id)
 }

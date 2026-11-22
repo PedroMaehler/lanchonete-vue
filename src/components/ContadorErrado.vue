@@ -1,7 +1,7 @@
 <!-- PARTE 3 -->
 <script setup>
-// #17 - Jeito ERRADO: variável comum
-// O valor muda (veja no console com F12), mas a tela NÃO atualiza
+
+// #17 - Jeito ERRADO: variável comum, o valor muda (F12) mas a tela não atualiza
 let quantidade = 0
 
 function somar() {
