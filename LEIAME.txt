@@ -1,0 +1,9 @@
+Trabalho Final - Frameworks Front-End - Vue
+Tema: Lanchonete do Grupo
+
+Para rodar:
+npm install
+npm run dev
+
+#1 - O projeto foi criado com: npm create vue@latest
+(nome do projeto e nenhum recurso extra marcado)
